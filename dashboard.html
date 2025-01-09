@@ -34,7 +34,9 @@
     .app-body-main-content {
       padding: 20px;
     }
-
+    .about-description{
+      background color:red;
+    }
     .tiles {
       display: flex;
       flex-wrap: wrap;
@@ -43,7 +45,7 @@
     }
 
     .tile {
-      background-color: #ffffff;
+      background-color: linear-gradient(90deg,aqua,orange,green);
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -72,7 +74,7 @@
     }
 
     .tile.my-wallet {
-      background-color: #4CAF50;
+       background-color: lightgreen;
     }
 
     .tile.deposit {
@@ -137,15 +139,15 @@
       margin-bottom: 15px;
       padding: 10px;
       color: #4CAF50;
-      background-color: white;
+      background-color: lightgreen;
       border-radius: 4px;
       font-weight: bold;
     }
 
     .pending-dot {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 30px;
+      height: 30px;
       background-color: green;
       border-radius: 50%;
       margin-top: 5px;
@@ -159,7 +161,6 @@
     <header class="app-header">
       <h1>JISORT MICRO BANK  2025</h1>
       <p>Ensure you activated your account before withdrawing. Deposit 40 KSH to verify.</p>
-    
     </header>
 
     <!-- Main Content -->
@@ -178,13 +179,10 @@
             </div>
 
             <!-- Tile: Direct Deposit -->
-            <div class="tile deposit" onclick="openlink ()"/>
+            <div class="tile deposit" onclick="window.open('https://store.pesapal.com/jisorstmicro', '_blank');">
               <i class="fas fa-piggy-bank"></i>
               <div class="tile-header">
                 <h3>Direct Deposit</h3>
-                <a href="https://store.pesapal.com/jisorstmicro"/>
-                
-            
               </div>
             </div>
 
@@ -193,7 +191,7 @@
               <i class="fas fa-user-check"></i>
               <div class="tile-header">
                 <h3>Account Status</h3>
-                <p>Verified</p>
+                <p>Pending Verification</p>
                 <span class="pending-dot"></span>
               </div>
             </div>
@@ -308,4 +306,4 @@
   </script>
 </body>
 
-        </html>
+</html>
